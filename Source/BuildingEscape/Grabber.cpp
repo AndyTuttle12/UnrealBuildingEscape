@@ -55,6 +55,8 @@ void UGrabber::SetupInputComponent()
 	}
 }
 
+
+/// Actual Grab and release methods
 void UGrabber::Grab()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Grabbed!"));
@@ -79,6 +81,7 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 		// Move the object that we're holding
 }
 
+// Get Physics body if available
 FHitResult UGrabber::GetFirstPhysicsBodyInReach() const
 {
 	/// Get the player view point this tick
